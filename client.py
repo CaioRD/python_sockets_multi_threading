@@ -5,8 +5,8 @@ PORT = 5050
 FORMAT = 'UTF-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
 # Whatever IP address you found from running ifconfig in terminal.
-# SERVER = ""
-SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = "10.1.13.15"
+# SERVER = socket.gethostbyname(socket.gethostname())
 
 ADDR = (SERVER, PORT)
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -22,10 +22,10 @@ def send(msg):
     client.send(message)
     print(client.recv(2048).decode(FORMAT))
 
-send("Hello World")
+send("Dale")
 input()
-send("Hello Matt")
+send("Blz")
 input()
-send("Hello Everyone")
+send("Cade Mirla")
 input()
 send(DISCONNECT_MESSAGE)
